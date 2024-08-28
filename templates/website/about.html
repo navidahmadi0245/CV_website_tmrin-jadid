@@ -10,8 +10,8 @@
 						<div class="banner_content text-center">
 							<h2>درباره ما</h2>
 							<div class="page_link">
-								<a href="index.html">خانه</a>
-								<a href="about-us.html">درباره ما</a>
+								<a href="{% url 'website:index' %}">خانه</a>
+								<a href="{% url 'website:about' %}">درباره ما</a>
 							</div>
 						</div>
 					</div>
@@ -27,7 +27,7 @@
            		<div class="profile_inner p_120">
 					<div class="row">
 						<div class="col-lg-5">
-							<img class="img-fluid" src="img/personal-2.jpg" alt="">
+							<img class="img-fluid" src="{% static 'css/personal-2.jpg' %}" alt="">
 						</div>
 						<div class="col-lg-7">
 							<div class="personal_text">

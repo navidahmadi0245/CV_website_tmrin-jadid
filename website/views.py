@@ -18,6 +18,10 @@ def contact_view(request):
 
 def services_view(request):
     return render(request, 'website/services.html')
+def elements_view(request):
+    return render(request, 'website/elements.html')
+def portfolio_view(request):
+    return render(request, 'website/portfolio.html')
 
 
 def test_view(request):

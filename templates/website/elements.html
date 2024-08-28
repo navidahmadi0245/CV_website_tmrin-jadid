@@ -1,23 +1,24 @@
+{% load static %}
 <!doctype html>
 <html lang="fa">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="icon" href="img/favicon.png" type="image/png">
+        <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png">
 		<title>قالب رایگان MeetMe :: فارسی و راست چین شده توسط وب روبیک</title>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap-rtl.min.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/animate-css/animate.css">
-        <link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-rtl.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/linericon/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/lightbox/simpleLightbox.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/nice-select/css/nice-select.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/animate-css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'vendors/popup/magnific-popup.css' %}">
         <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
     </head>
     <body>
         
@@ -27,7 +28,7 @@
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container box_1620">
 						<!-- Brand and toggle get grouped for better mobile display -->
-						<b><a class="navbar-brand " href="index.html" style="color: white;">آشناشو</a></b>
+						<b><a class="navbar-brand " href="{% url 'website:index' %}" style="color: white;">آشناشو</a></b>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
@@ -36,24 +37,24 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse offset" id="navbarSupportedContent" >
 							<ul class="nav navbar-nav menu_nav mr-auto"  >
-								<li class="nav-item active"><a class="nav-link" href="index.html">خانه</a></li> 
-								<li class="nav-item"><a class="nav-link" href="about-us.html">درباره ما</a></li> 
-								<li class="nav-item"><a class="nav-link" href="services.html">خدمات</a></li> 
+								<li class="nav-item active"><a class="nav-link" href="{% url 'website:index' %}">خانه</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'website:about' %}">درباره ما</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'website:services' %}">خدمات</a></li>
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">صفحه ها</a>
 									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link txt-alg-hd" href="portfolio.html">پروژه ها</a></li>
-										<li class="nav-item"><a class="nav-link txt-alg-hd" href="elements.html">المانها</a></li>
+										<li class="nav-item"><a class="nav-link txt-alg-hd" href="{% url 'website:portfolio' %}">پروژه ها</a></li>
+										<li class="nav-item"><a class="nav-link txt-alg-hd" href="{% url 'website:elements' %}">المانها</a></li>
 									</ul>
 								</li> 
 								<li class="nav-item submenu dropdown">
 									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="margin-left:30px;" >وبلاگ</a>
 									<ul class="dropdown-menu "  >
-										<li class="nav-item"><a class="nav-link txt-alg-hd" href="blog.html" >وبلاگ</a></li>
-										<li class="nav-item"><a class="nav-link txt-alg-hd" href="single-blog.html">صفحه داخلی</a></li>
+										<li class="nav-item"><a class="nav-link txt-alg-hd" href="{% url 'blog:blog' %}" >وبلاگ</a></li>
+										<li class="nav-item"><a class="nav-link txt-alg-hd" href="{% url 'blog:single' %}">صفحه داخلی</a></li>
 									</ul>
 								</li> 
-								<li class="nav-item"><a class="nav-link" href="contact.html"  >تماس با ما</a></li>
+								<li class="nav-item"><a class="nav-link" href="{% url 'website:contact' %}"  >تماس با ما</a></li>
 							</ul>
 						</div> 
 					</div>
@@ -71,8 +72,8 @@
 						<div class="banner_content text-center">
 							<h2>المانها</h2>
 							<div class="page_link" >
-								<a href="index.html" >خانه</a>
-								<a href="elements.html"  >المانها</a>
+								<a href="{% url 'website:index' %}" >خانه</a>
+								<a href="{% url 'website:elements' %}"  >المانها</a>
 							</div>
 						</div>
 					</div>
@@ -197,7 +198,7 @@
 						<h3 class="mb-30 title_color">چپ چین</h3>
 						<div class="row">
 							<div class="col-md-3">
-								<img src="img/elements/d.jpg" alt="" class="img-fluid">
+								<img src="{% static 'img/elements/d.jpg' %}" alt="" class="img-fluid">
 							</div>
 							<div class="col-md-9 mt-sm-20 left-align-p">
 								<p> شاخه ی آگروتوریسم یا گردشگری کشاورزی و روستایی سال‌هاست که در کشورهای پیشرفته ی جهان رونق گرفته و ایران نیز به سبب مزارع و دامپروری های فراوان و طبیعت بکر و زیبا، ظرفیت بالایی برای این طرح دارد. این زوج جهانگرد سال‌هاستمزرعه ی گردشگری خورشید، اولین مزرعه ی گردشگری ایران می‌باشد. علی خدابخشی مهندس کشاورزی در شاخه ی دامپروری و محبوبه ملکی کارشناس تربیت بدنی و کارشناس گردشگری، ایده ی تاسیس مزرعه گردشگری را سال ها در سر می پروراندند و به علت فعالیت مستمر در حوزه ی جهانگردی، زمان لازم را برای اجرای این طرح در اختیار نداشتند. افتتاح مزرعه ی گردشگری خورشید در تیر ماه ۹۷ صورت گرفت و هم اکنون میزبان طبیعت دوستان می باشد. </p>
@@ -212,7 +213,7 @@
 								<p class="text-right">  افتتاح مزرعه ی گردشگری خورشید در تیر ماه ۹۷ صورت گرفت و هم اکنون میزبان طبیعت دوستان می باشد. افتتاح مزرعه ی گردشگری خورشید در تیر ماه ۹۷ صورت گرفت و هم اکنون میزبان طبیعت دوستان می باشد. </p>
 							</div>
 							<div class="col-md-3">
-								<img src="img/elements/d.jpg" alt="" class="img-fluid">
+								<img src="{% static 'img/elements/d.jpg' %}" alt="" class="img-fluid">
 							</div>
 						</div>
 					</div>
@@ -261,7 +262,7 @@
 								</div>
 								<div class="table-row">
 									<div class="serial">۰۱</div>
-									<div class="country"> <img src="img/elements/f1.jpg" alt="flag">کانادا</div>
+									<div class="country"> <img src="{% static 'img/elements/f1.jpg' %}" alt="flag">کانادا</div>
 									<div class="visit">۶۴۵۰۳۲</div>
 									<div class="percentage">
 										<div class="progress">
@@ -271,7 +272,7 @@
 								</div>
 								<div class="table-row">
 									<div class="serial">۰۲</div>
-									<div class="country"> <img src="img/elements/f2.jpg" alt="flag">کانادا</div>
+									<div class="country"> <img src="{% static 'img/elements/f2.jpg' %}" alt="flag">کانادا</div>
 									<div class="visit">۶۴۵۰۳۲</div>
 									<div class="percentage">
 										<div class="progress">
@@ -281,7 +282,7 @@
 								</div>
 								<div class="table-row">
 									<div class="serial">۰۳</div>
-									<div class="country"> <img src="img/elements/f3.jpg" alt="flag">کانادا</div>
+									<div class="country"> <img src="{% static 'img/elements/f3.jpg' %}" alt="flag">کانادا</div>
 									<div class="visit">۶۴۵۰۳۲</div>
 									<div class="percentage">
 										<div class="progress">
@@ -291,7 +292,7 @@
 								</div>
 								<div class="table-row">
 									<div class="serial">۰۴</div>
-									<div class="country"> <img src="img/elements/f4.jpg" alt="flag">کانادا</div>
+									<div class="country"> <img src="{% static 'img/elements/f4.jpg' %}" alt="flag">کانادا</div>
 									<div class="visit">۶۴۵۰۳۲</div>
 									<div class="percentage">
 										<div class="progress">
@@ -301,7 +302,7 @@
 								</div>
 								<div class="table-row">
 									<div class="serial">۰۵</div>
-									<div class="country"> <img src="img/elements/f5.jpg" alt="flag">کانادا</div>
+									<div class="country"> <img src="{% static 'img/elements/f5.jpg' %}" alt="flag">کانادا</div>
 									<div class="visit">۶۴۵۰۳۲</div>
 									<div class="percentage">
 										<div class="progress">
@@ -311,7 +312,7 @@
 								</div>
 								<div class="table-row">
 									<div class="serial">06</div>
-									<div class="country"> <img src="img/elements/f6.jpg" alt="flag">کانادا</div>
+									<div class="country"> <img src="{% static 'img/elements/f6.jpg' %}" alt="flag">کانادا</div>
 									<div class="visit">۶۴۵۰۳۲</div>
 									<div class="percentage">
 										<div class="progress">
@@ -321,7 +322,7 @@
 								</div>
 								<div class="table-row">
 									<div class="serial">۰۷</div>
-									<div class="country"> <img src="img/elements/f7.jpg" alt="flag">کانادا</div>
+									<div class="country"> <img src="{% static 'img/elements/f7.jpg' %}" alt="flag">کانادا</div>
 									<div class="visit">۶۴۵۰۳۲</div>
 									<div class="percentage">
 										<div class="progress">
@@ -331,7 +332,7 @@
 								</div>
 								<div class="table-row">
 									<div class="serial">۰۸</div>
-									<div class="country"> <img src="img/elements/f8.jpg" alt="flag">کانادا</div>
+									<div class="country"> <img src="{% static 'img/elements/f8.jpg' %}" alt="flag">کانادا</div>
 									<div class="visit">۶۴۵۰۳۲</div>
 									<div class="percentage">
 										<div class="progress">
@@ -346,28 +347,28 @@
 						<h3 class="title_color">گالری تصاویر</h3>
 						<div class="row gallery-item">
 							<div class="col-md-4">
-								<a href="img/elements/g1.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g1.jpg);"></div></a>
+								<a href="{% static 'img/elements/g1.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g1.jpg);"></div></a>
 							</div>
 							<div class="col-md-4">
-								<a href="img/elements/g2.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g2.jpg);"></div></a>
+								<a href="{% static 'img/elements/g2.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g2.jpg);"></div></a>
 							</div>
 							<div class="col-md-4">
-								<a href="img/elements/g3.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g3.jpg);"></div></a>
+								<a href="{% static 'img/elements/g3.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g3.jpg);"></div></a>
 							</div>
 							<div class="col-md-6">
-								<a href="img/elements/g4.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g4.jpg);"></div></a>
+								<a href="{% static 'img/elements/g4.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g4.jpg);"></div></a>
 							</div>
 							<div class="col-md-6">
-								<a href="img/elements/g5.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g5.jpg);"></div></a>
+								<a href="{% static 'img/elements/g5.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g5.jpg);"></div></a>
 							</div>
 							<div class="col-md-4">
-								<a href="img/elements/g6.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g6.jpg);"></div></a>
+								<a href="{% static 'img/elements/g6.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g6.jpg);"></div></a>
 							</div>
 							<div class="col-md-4">
-								<a href="img/elements/g7.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g7.jpg);"></div></a>
+								<a href="{% static 'img/elements/g7.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g7.jpg);"></div></a>
 							</div>
 							<div class="col-md-4">
-								<a href="img/elements/g8.jpg" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g8.jpg);"></div></a>
+								<a href="{% static 'img/elements/g8.jpg' %}" class="img-gal"><div class="single-gallery-image" style="background: url(img/elements/g8.jpg);"></div></a>
 							</div>
 						</div>
 					</div>
@@ -666,20 +667,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
         
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-        <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-        <script src="vendors/isotope/isotope.pkgd.min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="vendors/popup/jquery.magnific-popup.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-        <script src="vendors/counter-up/jquery.counterup.min.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="js/theme.js"></script>
+        <script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+        <script src="{% static 'js/popper.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/stellar.js' %}"></script>
+        <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+        <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors/isotope/isotope.pkgd.min.js' %}"></script>
+        <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'vendors/popup/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+        <script src="{% static 'vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+        <script src="{% static 'vendors/counter-up/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js/mail-script.js' %}"></script>
+        <script src="{% static 'js/theme.js' %}"></script>
     </body>
 </html>
